@@ -1,0 +1,67 @@
+inp w #0
+# z = w + 1
+
+inp w #1 
+test : z% 26 + 13 == w
+z = z*26 + w + 9
+
+inp w #2
+test : z % 26 + 12 == w
+z = z*26 + w + 11
+
+inp w #3
+test : z%26 -13 == w
+z //= 26
+z = z*(test 26) + w+6
+
+inp w #4
+test : z%26 + 11 == w
+z = z*26 + w+6
+
+inp w #5
+test : z%26 + 15 == w
+z = z*26 + w+13
+
+inp w #6
+test : z%26 - 14 == w
+z /= 26
+z = z*26 + w + 13
+
+inp w #7
+test : z%26 + 12 == w
+z = z*26 + w + 5
+
+inp w #8
+test : z%26 - 8 == w
+z //= 26
+z = z*26 + w + 7
+
+inp w #9
+test : z%26 + 14 == w
+z = z*26 + w + 2
+
+inp w #10
+test : z%26 - 9 == w
+z //= 26
+z = z*26 + w + 10
+
+inp w #11
+test : z%26 -11 == w
+z //= 26
+z = z*26 +w + 14
+
+inp w #11
+test : z%26 -11 == w
+z //= 26
+z = z*26 +w + 14
+
+inp w #12
+test : z%26 - 6 == w
+z //= 26
+z = z*26 + w + 7
+
+
+inp w #13
+test : z % 26 - 5 == w
+z //= 26
+z = z*26 + w + 1
